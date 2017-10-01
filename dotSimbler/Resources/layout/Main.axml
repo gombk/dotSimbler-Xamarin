@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1">
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout2">
+        <TableRow
+            android:id="@+id/tableRow10">
+            <TextView
+                android:text="Compilador"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView100"
+                android:layout_column="0"
+                android:ems="8" />
+            <TextView
+                android:text="Registrador:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="2"
+                android:id="@+id/textView152"
+                android:layout_width="127.5dp"
+                android:layout_span="2" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow6">
+            <EditText
+                android:inputType="textMultiLine"
+                android:id="@+id/txtComp"
+                android:layout_column="0"
+                android:enabled="true" />
+            <TextView
+                android:text="AX"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView87"
+                android:layout_column="2"
+                android:layout_width="45dp" />
+            <TextView
+                android:text="000000"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtAX"
+                android:layout_column="3"
+                android:layout_width="90.5dp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow7">
+            <TextView
+                android:text="BX"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textBX"
+                android:layout_column="2" />
+            <TextView
+                android:text="000000"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="3"
+                android:id="@+id/txtBX" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow8">
+            <Button
+                android:text="Executar"
+                android:id="@+id/btnExec"
+                android:layout_column="0" />
+            <TextView
+                android:text="CX"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="2"
+                android:id="@+id/textView89" />
+            <TextView
+                android:text="000000"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="3"
+                android:id="@+id/txtCX" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow9">
+            <TextView
+                android:text="DX"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="2"
+                android:id="@+id/textView90" />
+            <TextView
+                android:text="000000"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="3"
+                android:id="@+id/txtDX" />
+        </TableRow>
+        <TableRow
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/tableRow11">
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow12">
+            <TextView
+                android:text="S"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="2"
+                android:id="@+id/textView173" />
+            <TextView
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_column="3"
+                android:id="@+id/txtSflag" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow13">
+            <TextView
+                android:text="O"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="2"
+                android:id="@+id/textView174" />
+            <TextView
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_column="3"
+                android:id="@+id/txtOflag" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow14">
+            <TextView
+                android:text="Z"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="2"
+                android:id="@+id/textView179" />
+            <TextView
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_column="3"
+                android:id="@+id/txtZflag" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

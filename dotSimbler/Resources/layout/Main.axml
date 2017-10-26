@@ -134,4 +134,19 @@
                 android:id="@+id/txtZflag" />
         </TableRow>
     </TableLayout>
+    <Button
+        android:text="SOBRE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSobre" />
+    <Button
+        android:text="SIMULADOR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSimulador" />
+    <Button
+        android:text="HELPER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnHelper" />
 </LinearLayout>

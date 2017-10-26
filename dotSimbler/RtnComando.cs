@@ -71,19 +71,19 @@ namespace dotSimbler
 
                 //Decrementa em "1" o valor do campo definido
                 case "DEC":
-                    if (operando == "AX")
+                    if (operando.ToUpper() == "AX")
                     {
                         reg.SetAX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(AX) - 1));
                     }
-                    else if (operando == "BX")
+                    else if (operando.ToUpper() == "BX")
                     {
                         reg.SetBX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(BX) - 1));
                     }
-                    else if (operando == "CX")
+                    else if (operando.ToUpper() == "CX")
                     {
                         reg.SetCX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(CX) - 1));
                     }
-                    else if (operando == "DX")
+                    else if (operando.ToUpper() == "DX")
                     {
                         reg.SetDX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(DX) - 1));
                     }
@@ -91,19 +91,19 @@ namespace dotSimbler
 
                 //Incrementa em "1" o valor do campo definido.
                 case "INC":
-                    if (operando == "AX")
+                    if (operando.ToUpper() == "AX")
                     {
                         reg.SetAX(RtnNumTrans.DecBin(RtnNumTrans.BinDec(AX) + 1));
                     }
-                    else if (operando == "BX")
+                    else if (operando.ToUpper() == "BX")
                     {
                         reg.SetBX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(BX + 1)));
                     }
-                    else if (operando == "CX")
+                    else if (operando.ToUpper() == "CX")
                     {
                         reg.SetCX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(CX + 1)));
                     }
-                    else if (operando == "DX")
+                    else if (operando.ToUpper() == "DX")
                     {
                         reg.SetDX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(DX + 1)));
                     }
@@ -111,27 +111,86 @@ namespace dotSimbler
 
                 //Efetua a operação "AND com valor atual do registrador acumulador (AX) e o valor especificado.
                 case "AND":
+                    string vlAND = reg.CompletaReg(RtnNumTrans.HexaBin(operando));
+                    string axAND = reg.GetAX();
+                    string rtAND = "";
+                    for (int i = 0; i < vlAND.Length; i++)
+                    {
+                        if (vlAND[i].ToString() == "1" && axAND[i].ToString() == "1")
+                        {
+                            rtAND += "1";
+                        }
+                        else
+                        {
+                            rtAND += "0";
+                        }
+                    }
+                    reg.SetAX(rtAND);
                     break;
 
                 //Efetua a operação "NOT" com o valor atual do registrador acumulador (AX). 
                 case "NOT":
+                    string axNOT = reg.GetAX();
+                    string rtNOT = "";
+                    for (int i = 0; i < axNOT.Length; i++)
+                    {
+                        if (axNOT[i].ToString() == "1")
+                        {
+                            rtNOT += "0";
+                        }
+                        else
+                        {
+                            rtNOT += "1";
+                        }
+                    }
+                    reg.SetAX(rtNOT);
                     break;
 
                 //Efetua a operação "OU" com valor atual do registrador acumulador (AX) e o valor especificado.  
                 case "OR":
+                    string vlOR = reg.CompletaReg(RtnNumTrans.HexaBin(operando));
+                    string axOR = reg.GetAX();
+                    string rtOR = "";
+                    for (int i = 0; i < vlOR.Length; i++)
+                    {
+                        if (vlOR[i].ToString() == "1" && axOR[i].ToString() == "1")
+                        {
+                            rtOR += "1";
+                        }
+                        else
+                        {
+                            rtOR += "0";
+                        }
+                    }
+                    reg.SetAX(rtOR);
                     break;
 
                 //Armazena o valor definido no registrador acumulador (AX) no campo especificado.
                 case "STORE":
-                    if (operando == "AX")
+                    if (operando.ToUpper() == "AX")
                     {
-                        reg.SetAX(AX + 1);
+                        reg.SetAX(reg.GetAX());
+                        break;
                     }
-                    else if (operando == "BX")
+
+                    if (operando.ToUpper() == "BX")
                     {
-                        BX = AX;
-                        reg.SetBX(BX + 1);
+                        reg.SetBX(reg.GetAX());
+                        break;
                     }
+
+                    if (operando.ToUpper() == "CX")
+                    {
+                        reg.SetCX(reg.GetAX());
+                        break;
+                    }
+
+                    if (operando.ToUpper() == "DX")
+                    {
+                        reg.SetDX(reg.GetAX());
+                        break;
+                    }
+
                     break;
             }
 

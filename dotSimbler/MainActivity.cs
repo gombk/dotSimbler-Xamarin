@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
 
 namespace dotSimbler
 {
@@ -16,6 +17,9 @@ namespace dotSimbler
         TextView txtZflag;
         EditText txtComp;
         Button btnExec;
+        Button btnSobre;
+        Button btnSimulador;
+        Button btnHelper;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -33,11 +37,28 @@ namespace dotSimbler
             txtZflag = FindViewById<TextView>(Resource.Id.txtZflag);
             txtComp = FindViewById<EditText>(Resource.Id.txtComp);
             btnExec = FindViewById<Button>(Resource.Id.btnExec);
+            btnSimulador = FindViewById<Button>(Resource.Id.btnSimulador);
+            btnSobre = FindViewById<Button>(Resource.Id.btnSobre);
+            btnHelper = FindViewById<Button>(Resource.Id.btnHelper);
 
             btnExec.Click += BtnExec_Click;
+            btnSobre.Click += BtnSobre_Click;
+            btnHelper.Click += BtnHelper_Click;
+
+            btnSimulador.Enabled = false;
+        }
+        private void BtnSobre_Click(object sender, System.EventArgs e)
+        {
+            var intSobre = new Intent(this, typeof(Sobre));
+            StartActivity(intSobre);
         }
 
-        private void BtnExec_Click(object sender, System.EventArgs e)
+        private void BtnHelper_Click(object sender, System.EventArgs e)
+        {
+            var intHelper = new Intent(this, typeof(Helper));
+            StartActivity(intHelper);
+        }
+            private void BtnExec_Click(object sender, System.EventArgs e)
         {
             Registrador registrador = new Registrador();
             RtnComando cmd = new RtnComando();

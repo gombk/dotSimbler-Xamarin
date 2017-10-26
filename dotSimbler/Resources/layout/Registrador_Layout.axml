@@ -102,12 +102,6 @@
                 android:gravity="center"
                 android:id="@+id/txtSflag" />
             <TextView
-                android:text="="
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_column="1"
-                android:gravity="center"
-                android:id="@+id/textView66" />
-            <TextView
                 android:text="0"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_column="2"
@@ -122,12 +116,6 @@
                 android:gravity="center"
                 android:id="@+id/textView34" />
             <TextView
-                android:text="="
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_column="1"
-                android:gravity="center"
-                android:id="@+id/textView72" />
-            <TextView
                 android:text="0"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_column="2"
@@ -141,12 +129,6 @@
                 android:layout_column="0"
                 android:gravity="center"
                 android:id="@+id/textView35" />
-            <TextView
-                android:text="="
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_column="1"
-                android:gravity="center"
-                android:id="@+id/textView73" />
             <TextView
                 android:text="0"
                 android:textAppearance="?android:attr/textAppearanceMedium"

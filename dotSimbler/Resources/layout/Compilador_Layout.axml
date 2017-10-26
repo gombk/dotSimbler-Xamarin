@@ -41,8 +41,9 @@
                 android:id="@+id/relativeLayout5">
                 <EditText
                     android:inputType="textMultiLine"
-                    android:layout_width="180.5dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLines="6"
                     android:id="@+id/txtComp" />
             </RelativeLayout>
         </TableRow>
@@ -57,7 +58,7 @@
                 android:id="@+id/relativeLayout6">
                 <Button
                     android:text="EXECUTAR"
-                    android:layout_width="180.5dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/btnExec" />
             </RelativeLayout>

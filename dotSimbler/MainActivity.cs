@@ -38,16 +38,16 @@ namespace dotSimbler
             txtComp = FindViewById<EditText>(Resource.Id.txtComp);
             btnExec = FindViewById<Button>(Resource.Id.btnExec);
             btnSimulador = FindViewById<Button>(Resource.Id.btnSimulador);
-            btnSobre = FindViewById<Button>(Resource.Id.btnSobre);
-            btnHelper = FindViewById<Button>(Resource.Id.btnHelper);
+            //btnSobre = FindViewById<Button>(Resource.Id.btnSobre);
+            //btnHelper = FindViewById<Button>(Resource.Id.btnHelper);
 
             btnExec.Click += BtnExec_Click;
-            btnSobre.Click += BtnSobre_Click;
-            btnHelper.Click += BtnHelper_Click;
+            //btnSobre.Click += BtnSobre_Click;
+            //btnHelper.Click += BtnHelper_Click;
 
-            btnSimulador.Enabled = false;
+            //btnSimulador.Enabled = false;
         }
-        private void BtnSobre_Click(object sender, System.EventArgs e)
+        /*private void BtnSobre_Click(object sender, System.EventArgs e)
         {
             var intSobre = new Intent(this, typeof(Sobre));
             StartActivity(intSobre);
@@ -57,7 +57,7 @@ namespace dotSimbler
         {
             var intHelper = new Intent(this, typeof(Helper));
             StartActivity(intHelper);
-        }
+        }*/
             private void BtnExec_Click(object sender, System.EventArgs e)
         {
             Registrador registrador = new Registrador();

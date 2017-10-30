@@ -15,20 +15,24 @@ namespace dotSimbler
 {
     public class AnalisadorLexico
     {
-        private static List<string> comandos = new List<string>() { "ADD", "SUB", "MUL", "DIV", "INC", "DEC", "STORE" };
+        private static List<string> comandos = new List<string>() { "ADD", "SUB", "MUL", "DIV", "INC", "DEC", "STORE", "NOT" };
 
         public Resposta verificaComando(string[] verificar)
         {
             Resposta r = new Resposta();
             Regex rg = new Regex(@"([H-Z])");
             r.executa = true;
-
+            
             if (!comandos.Contains(verificar[0].ToUpper()))
             {
                 r.executa = false;
                 r.erro += "O comando " + verificar[0] + " é inválido.\n";
                 return r;
             }
+
+
+            if (verificar.Count() < 2)
+                return r;
 
             if (!verificar[1].ToUpper().Equals("AX") || !verificar[1].ToUpper().Equals("BX") || !verificar[1].ToUpper().Equals("CX") || !verificar[1].ToUpper().Equals("DX"))
             {

@@ -22,24 +22,28 @@ namespace dotSimbler
             String CX = reg.GetCX();
             String DX = reg.GetCX();
 
-            //verifica se o Operando é valor ou Registrador, se for registrador, seta o valor no operando.
-            switch (operando.ToUpper())
+            if (comando.ToUpper() != "INC" && comando.ToUpper() != "DEC" && comando.ToUpper() != "STORE" 
+                && comando.ToUpper() != "AND" && comando.ToUpper() != "OR" && comando.ToUpper() != "NOT")
             {
-                case "AX":
-                    operando = reg.GetAX().ToString();
-                    break;
+                //verifica se o Operando é valor ou Registrador, se for registrador, seta o valor no operando.
+                switch (operando.ToUpper())
+                {
+                    case "AX":
+                        operando = reg.GetAX().ToString();
+                        break;
 
-                case "BX":
-                    operando = reg.GetBX().ToString();
-                    break;
+                    case "BX":
+                        operando = reg.GetBX().ToString();
+                        break;
 
-                case "CX":
-                    operando = reg.GetCX().ToString();
-                    break;
+                    case "CX":
+                        operando = reg.GetCX().ToString();
+                        break;
 
-                case "DX":
-                    operando = reg.GetDX().ToString();
-                    break;
+                    case "DX":
+                        operando = reg.GetDX().ToString();
+                        break;
+                }
             }
 
             //Executa o comando usado.
@@ -52,7 +56,7 @@ namespace dotSimbler
 
                 //Subtrai o operando ao Registrador AX
                 case "SUB":
-                    reg.SetAX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - RtnNumTrans.BinDec(AX)));
+                    reg.SetAX(RtnNumTrans.DecBin(RtnNumTrans.BinDec(AX) - RtnNumTrans.HexaDec(operando)));
                     break;
 
                 //Multiplica o operando ao registrador AX
@@ -73,19 +77,19 @@ namespace dotSimbler
                 case "DEC":
                     if (operando.ToUpper() == "AX")
                     {
-                        reg.SetAX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(AX) - 1));
+                        reg.SetAX(RtnNumTrans.DecBin(RtnNumTrans.BinDec(reg.GetAX()) - 1));
                     }
                     else if (operando.ToUpper() == "BX")
                     {
-                        reg.SetBX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(BX) - 1));
+                        reg.SetBX(RtnNumTrans.DecBin(RtnNumTrans.BinDec(reg.GetBX()) - 1));
                     }
                     else if (operando.ToUpper() == "CX")
                     {
-                        reg.SetCX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(CX) - 1));
+                        reg.SetCX(RtnNumTrans.DecBin(RtnNumTrans.BinDec(reg.GetCX()) - 1));
                     }
                     else if (operando.ToUpper() == "DX")
                     {
-                        reg.SetDX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(DX) - 1));
+                        reg.SetDX(RtnNumTrans.DecBin(RtnNumTrans.BinDec(reg.GetDX()) - 1));
                     }
                     break;
 
@@ -93,19 +97,19 @@ namespace dotSimbler
                 case "INC":
                     if (operando.ToUpper() == "AX")
                     {
-                        reg.SetAX(RtnNumTrans.DecBin(RtnNumTrans.BinDec(AX) + 1));
+                        reg.SetAX(RtnNumTrans.DecBin(RtnNumTrans.BinDec(reg.GetAX()) + 1));
                     }
                     else if (operando.ToUpper() == "BX")
                     {
-                        reg.SetBX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(BX + 1)));
+                        reg.SetBX(RtnNumTrans.DecBin(RtnNumTrans.BinDec(reg.GetBX()) + 1));
                     }
                     else if (operando.ToUpper() == "CX")
                     {
-                        reg.SetCX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(CX + 1)));
+                        reg.SetCX(RtnNumTrans.DecBin(RtnNumTrans.BinDec(reg.GetCX()) + 1));
                     }
                     else if (operando.ToUpper() == "DX")
                     {
-                        reg.SetDX(RtnNumTrans.DecBin(RtnNumTrans.HexaDec(operando) - 0 - RtnNumTrans.BinDec(DX + 1)));
+                        reg.SetDX(RtnNumTrans.DecBin(RtnNumTrans.BinDec(reg.GetDX()) + 1));
                     }
                     break;
 

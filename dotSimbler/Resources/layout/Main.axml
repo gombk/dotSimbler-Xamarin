@@ -7,46 +7,58 @@
     android:id="@+id/linearLayout1"
     android:minWidth="25px"
     android:minHeight="25px">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2">
-        <fragment
-            class="dotSimbler.Compilador_Layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-        <fragment
-            class="dotSimbler.Registrador_Layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-    </LinearLayout>
-    <RelativeLayout
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout1">
-        <Button
-            android:text="HELPER"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnHelper" />
-    </RelativeLayout>
-  <RelativeLayout
-    android:minWidth="25px"
-    android:minHeight="25px"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/relativeLayout2">
-    <Button
-      android:text="SOBRE"
+  <LinearLayout
+      android:orientation="horizontal"
+      android:minWidth="25px"
+      android:minHeight="25px"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:id="@+id/btnSobre" />
+      android:id="@+id/linearLayout2">
+    <fragment
+        class="dotSimbler.Compilador_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+    <fragment
+        class="dotSimbler.Registrador_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+  </LinearLayout>
+  <RelativeLayout
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/relativeLayout1">
+    <Button
+        android:text="HELPER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnHelper" />
+  </RelativeLayout>
+  <RelativeLayout
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/relativeLayout3">
+    <Button
+              android:text="SIMULADOR"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/btnSimulador" />
+  </RelativeLayout>
+  <RelativeLayout
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/relativeLayout2">
+    <Button
+        android:text="SOBRE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSobre" />
   </RelativeLayout>
 </LinearLayout>

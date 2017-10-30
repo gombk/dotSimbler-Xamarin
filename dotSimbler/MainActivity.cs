@@ -45,7 +45,7 @@ namespace dotSimbler
             btnSobre.Click += BtnSobre_Click;
             btnHelper.Click += BtnHelper_Click;
 
-            //btnSimulador.Enabled = false;
+            btnSimulador.Enabled = false;
         }
         private void BtnSobre_Click(object sender, System.EventArgs e)
         {
@@ -67,44 +67,49 @@ namespace dotSimbler
             var linhas = txt.Split('\n');
             bool exec = true;
             int count = 1;
-
-            foreach (var item in linhas)
+            if (txt != "")
             {
-                var comando = item.Split(' ');
-                var analisador = analisadorLexico.verificaComando(comando);
-                if (!analisador.executa)
-                {
-                    Toast.MakeText(this, analisador.erro + "Linha: " + count.ToString() + ".", ToastLength.Long).Show();
-                    exec = false;
-                    break;
-                }
-                count++;
-            }
-
-            if (exec)
-            {
-
                 foreach (var item in linhas)
                 {
                     var comando = item.Split(' ');
-                    var result = cmd.executa(comando[0], comando[1], registrador);
-
-                    txtAX.Text = result.GetAX();
-                    txtBX.Text = result.GetBX();
-                    txtCX.Text = result.GetCX();
-                    txtDX.Text = result.GetDX();
-
-                    if (txtAX.Text == "0" || txtAX.Text == "000000")
+                    var analisador = analisadorLexico.verificaComando(comando);
+                    if (!analisador.executa)
                     {
-                        txtZflag.Text = "1";
+                        Toast.MakeText(this, analisador.erro + "Linha: " + count.ToString() + ".", ToastLength.Long).Show();
+                        exec = false;
+                        break;
                     }
-                    else
+                    count++;
+                }
+
+                if (exec)
+                {
+
+                    foreach (var item in linhas)
                     {
-                        txtZflag.Text = "0";
+                        var comando = item.Split(' ');
+                        var result = cmd.executa(comando[0], comando[1], registrador);
+
+                        txtAX.Text = result.GetAX();
+                        txtBX.Text = result.GetBX();
+                        txtCX.Text = result.GetCX();
+                        txtDX.Text = result.GetDX();
+
+                        if (txtAX.Text == "0" || txtAX.Text == "000000")
+                        {
+                            txtZflag.Text = "1";
+                        }
+                        else
+                        {
+                            txtZflag.Text = "0";
+                        }
                     }
                 }
             }
-
+            else
+            {
+                Toast.MakeText(this, "Não existem comandos para executar." , ToastLength.Long).Show();
+            }
         }
     }
 }

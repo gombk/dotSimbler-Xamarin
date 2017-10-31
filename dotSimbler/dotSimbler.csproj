@@ -60,6 +60,9 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Registrador.cs" />
     <Compile Include="Registrador_Layout.cs" />
+    <Compile Include="Resources\layout\listaAdapter.cs" />
+    <Compile Include="Resources\layout\listaClass.cs" />
+    <Compile Include="Resources\layout\repLista.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resposta.cs" />
@@ -85,6 +88,9 @@
     <AndroidResource Include="Resources\layout\Registrador_Layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\listaComandos.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -107,6 +113,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\buttonSobre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\botaoRedondo.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

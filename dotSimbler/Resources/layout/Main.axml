@@ -31,49 +31,64 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:id="@+id/relativeLayout1">
-    <ImageButton
-        android:text="HELPER"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnHelper"
-        android:src="@drawable/buttonHelper"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"/>
-  </RelativeLayout>
-  <RelativeLayout
-      android:minWidth="25px"
-      android:minHeight="25px"
+  <TableLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:id="@+id/relativeLayout3">
-    <ImageButton
-        android:text="SIMULADOR"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnSimulador"
-        android:src="@drawable/buttonSimulador"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp" />
-  </RelativeLayout>
-  <RelativeLayout
+      android:id="@+id/tableLayout1"
       android:minWidth="25px"
-      android:minHeight="25px"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/relativeLayout2">
-    <ImageButton
-        android:text="SOBRE"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnSobre"
-        android:src="@drawable/buttonSobre"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp" />
+      android:minHeight="25px">
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:gravity="bottom"
+        android:showDividers="none">
+      <ImageButton
+          android:text="SIMULADOR"
+          android:id="@+id/btnSimulador"
+          android:src="@drawable/buttonSimulador"
+          android:background="@drawable/botaoRedondo"
+          android:paddingStart="24dp"
+          android:paddingEnd="24dp"
+          android:paddingTop="16dp"
+          android:paddingBottom="16dp"
+          android:layout_column="0"
+          android:layout_span="0"
+          android:layout_gravity="center"
+          android:padding="14dp" />
+      <Button
+          android:text=""
+          android:layout_column="1"
+          android:background="#323a45"
+          android:id="@+id/button1"
+          android:layout_width="65.0dp" />
+      <ImageButton
+          android:text="SOBRE"
+          android:id="@+id/btnSobre"
+          android:src="@drawable/buttonSobre"
+          android:background="@drawable/botaoRedondo"
+          android:paddingStart="24dp"
+          android:paddingEnd="24dp"
+          android:paddingTop="16dp"
+          android:paddingBottom="16dp"
+          android:layout_column="2"
+          android:padding="14dp" />
+      <Button
+          android:text=""
+          android:layout_column="3"
+          android:background="#323a45"
+          android:id="@+id/button2"
+          android:layout_width="65.0dp" />
+      <ImageButton
+          android:text="HELPER"
+          android:id="@+id/btnHelper"
+          android:src="@drawable/buttonHelper"
+          android:background="@drawable/botaoRedondo"
+          android:paddingStart="24dp"
+          android:paddingEnd="24dp"
+          android:paddingTop="16dp"
+          android:paddingBottom="16dp"
+          android:layout_column="4"
+          android:padding="14dp" />
+    </TableRow>
+  </TableLayout>
   </RelativeLayout>
 </LinearLayout>

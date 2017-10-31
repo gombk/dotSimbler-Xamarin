@@ -48,13 +48,16 @@ namespace dotSimbler
 			public const int borda = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int buttonHelper = 2130837505;
+			public const int botaoRedondo = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int buttonSimulador = 2130837506;
+			public const int buttonHelper = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int buttonSobre = 2130837507;
+			public const int buttonSimulador = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int buttonSobre = 2130837508;
 			
 			static Drawable()
 			{
@@ -69,17 +72,26 @@ namespace dotSimbler
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050017
+			public const int bandeiraImg = 2131034135;
+			
 			// aapt resource value: 0x7f05000a
 			public const int btnExec = 2131034122;
 			
-			// aapt resource value: 0x7f050014
-			public const int btnHelper = 2131034132;
-			
-			// aapt resource value: 0x7f050013
-			public const int btnSimulador = 2131034131;
+			// aapt resource value: 0x7f050016
+			public const int btnHelper = 2131034134;
 			
 			// aapt resource value: 0x7f050012
-			public const int btnSobre = 2131034130;
+			public const int btnSimulador = 2131034130;
+			
+			// aapt resource value: 0x7f050014
+			public const int btnSobre = 2131034132;
+			
+			// aapt resource value: 0x7f050013
+			public const int button1 = 2131034131;
+			
+			// aapt resource value: 0x7f050015
+			public const int button2 = 2131034133;
 			
 			// aapt resource value: 0x7f05000b
 			public const int linearLayout1 = 2131034123;
@@ -90,23 +102,14 @@ namespace dotSimbler
 			// aapt resource value: 0x7f05000e
 			public const int linearLayout3 = 2131034126;
 			
-			// aapt resource value: 0x7f05002f
-			public const int linearLayout4 = 2131034159;
+			// aapt resource value: 0x7f050030
+			public const int linearLayout4 = 2131034160;
 			
 			// aapt resource value: 0x7f050010
 			public const int linearLayout5 = 2131034128;
 			
-			// aapt resource value: 0x7f050015
-			public const int listView1 = 2131034133;
-			
-			// aapt resource value: 0x7f050016
-			public const int relativeLayout1 = 2131034134;
-			
-			// aapt resource value: 0x7f050018
-			public const int relativeLayout2 = 2131034136;
-			
-			// aapt resource value: 0x7f050017
-			public const int relativeLayout3 = 2131034135;
+			// aapt resource value: 0x7f050019
+			public const int relativeLayout1 = 2131034137;
 			
 			// aapt resource value: 0x7f050002
 			public const int relativeLayout4 = 2131034114;
@@ -132,32 +135,32 @@ namespace dotSimbler
 			// aapt resource value: 0x7f050008
 			public const int tableRow4 = 2131034120;
 			
-			// aapt resource value: 0x7f050025
-			public const int tableRow5 = 2131034149;
-			
 			// aapt resource value: 0x7f050026
-			public const int tableRow6 = 2131034150;
+			public const int tableRow5 = 2131034150;
 			
-			// aapt resource value: 0x7f050029
-			public const int tableRow7 = 2131034153;
+			// aapt resource value: 0x7f050027
+			public const int tableRow6 = 2131034151;
 			
-			// aapt resource value: 0x7f05002c
-			public const int tableRow8 = 2131034156;
+			// aapt resource value: 0x7f05002a
+			public const int tableRow7 = 2131034154;
+			
+			// aapt resource value: 0x7f05002d
+			public const int tableRow8 = 2131034157;
 			
 			// aapt resource value: 0x7f050003
 			public const int textView1 = 2131034115;
 			
-			// aapt resource value: 0x7f050019
-			public const int textView10 = 2131034137;
+			// aapt resource value: 0x7f05001a
+			public const int textView10 = 2131034138;
 			
-			// aapt resource value: 0x7f05001c
-			public const int textView12 = 2131034140;
+			// aapt resource value: 0x7f05001d
+			public const int textView12 = 2131034141;
 			
-			// aapt resource value: 0x7f05001f
-			public const int textView13 = 2131034143;
+			// aapt resource value: 0x7f050020
+			public const int textView13 = 2131034144;
 			
-			// aapt resource value: 0x7f050022
-			public const int textView17 = 2131034146;
+			// aapt resource value: 0x7f050023
+			public const int textView17 = 2131034147;
 			
 			// aapt resource value: 0x7f05000d
 			public const int textView2 = 2131034125;
@@ -165,56 +168,59 @@ namespace dotSimbler
 			// aapt resource value: 0x7f05000f
 			public const int textView3 = 2131034127;
 			
-			// aapt resource value: 0x7f05002a
-			public const int textView34 = 2131034154;
+			// aapt resource value: 0x7f05002b
+			public const int textView34 = 2131034155;
 			
-			// aapt resource value: 0x7f05002d
-			public const int textView35 = 2131034157;
+			// aapt resource value: 0x7f05002e
+			public const int textView35 = 2131034158;
 			
-			// aapt resource value: 0x7f050028
-			public const int textView36 = 2131034152;
+			// aapt resource value: 0x7f050029
+			public const int textView36 = 2131034153;
 			
-			// aapt resource value: 0x7f050030
-			public const int textView4 = 2131034160;
+			// aapt resource value: 0x7f050031
+			public const int textView4 = 2131034161;
 			
-			// aapt resource value: 0x7f05001a
-			public const int textView47 = 2131034138;
+			// aapt resource value: 0x7f05001b
+			public const int textView47 = 2131034139;
 			
 			// aapt resource value: 0x7f050011
 			public const int textView5 = 2131034129;
 			
-			// aapt resource value: 0x7f05001d
-			public const int textView57 = 2131034141;
-			
-			// aapt resource value: 0x7f050020
-			public const int textView58 = 2131034144;
-			
-			// aapt resource value: 0x7f050023
-			public const int textView59 = 2131034147;
-			
-			// aapt resource value: 0x7f05001b
-			public const int txtAX = 2131034139;
-			
 			// aapt resource value: 0x7f05001e
-			public const int txtBX = 2131034142;
+			public const int textView57 = 2131034142;
 			
 			// aapt resource value: 0x7f050021
-			public const int txtCX = 2131034145;
+			public const int textView58 = 2131034145;
+			
+			// aapt resource value: 0x7f050024
+			public const int textView59 = 2131034148;
+			
+			// aapt resource value: 0x7f05001c
+			public const int txtAX = 2131034140;
+			
+			// aapt resource value: 0x7f05001f
+			public const int txtBX = 2131034143;
+			
+			// aapt resource value: 0x7f050022
+			public const int txtCX = 2131034146;
 			
 			// aapt resource value: 0x7f050007
 			public const int txtComp = 2131034119;
 			
-			// aapt resource value: 0x7f050024
-			public const int txtDX = 2131034148;
+			// aapt resource value: 0x7f050025
+			public const int txtDX = 2131034149;
 			
-			// aapt resource value: 0x7f05002b
-			public const int txtOflag = 2131034155;
+			// aapt resource value: 0x7f050018
+			public const int txtNome = 2131034136;
 			
-			// aapt resource value: 0x7f050027
-			public const int txtSflag = 2131034151;
+			// aapt resource value: 0x7f05002c
+			public const int txtOflag = 2131034156;
 			
-			// aapt resource value: 0x7f05002e
-			public const int txtZflag = 2131034158;
+			// aapt resource value: 0x7f050028
+			public const int txtSflag = 2131034152;
+			
+			// aapt resource value: 0x7f05002f
+			public const int txtZflag = 2131034159;
 			
 			static Id()
 			{
@@ -236,13 +242,16 @@ namespace dotSimbler
 			public const int Helper = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Main = 2130903042;
+			public const int listaComandos = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Registrador_Layout = 2130903043;
+			public const int Main = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Sobre = 2130903044;
+			public const int Registrador_Layout = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int Sobre = 2130903045;
 			
 			static Layout()
 			{

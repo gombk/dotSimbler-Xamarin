@@ -31,11 +31,16 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:id="@+id/relativeLayout1">
-    <Button
+    <ImageButton
         android:text="HELPER"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnHelper" />
+        android:id="@+id/btnHelper"
+        android:src="@drawable/buttonHelper"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
   </RelativeLayout>
   <RelativeLayout
       android:minWidth="25px"
@@ -43,11 +48,16 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:id="@+id/relativeLayout3">
-    <Button
-              android:text="SIMULADOR"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:id="@+id/btnSimulador" />
+    <ImageButton
+        android:text="SIMULADOR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSimulador"
+        android:src="@drawable/buttonSimulador"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
   </RelativeLayout>
   <RelativeLayout
       android:minWidth="25px"
@@ -55,10 +65,15 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:id="@+id/relativeLayout2">
-    <Button
+    <ImageButton
         android:text="SOBRE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSobre" />
+        android:id="@+id/btnSobre"
+        android:src="@drawable/buttonSobre"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
   </RelativeLayout>
 </LinearLayout>

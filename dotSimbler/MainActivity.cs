@@ -17,9 +17,9 @@ namespace dotSimbler
         TextView txtZflag;
         EditText txtComp;
         Button btnExec;
-        Button btnSobre;
-        Button btnSimulador;
-        Button btnHelper;
+        ImageButton btnSobre;
+        ImageButton btnSimulador;
+        ImageButton btnHelper;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -37,9 +37,9 @@ namespace dotSimbler
             txtZflag = FindViewById<TextView>(Resource.Id.txtZflag);
             txtComp = FindViewById<EditText>(Resource.Id.txtComp);
             btnExec = FindViewById<Button>(Resource.Id.btnExec);
-            btnSimulador = FindViewById<Button>(Resource.Id.btnSimulador);
-            btnSobre = FindViewById<Button>(Resource.Id.btnSobre);
-            btnHelper = FindViewById<Button>(Resource.Id.btnHelper);
+            btnSimulador = FindViewById<ImageButton>(Resource.Id.btnSimulador);
+            btnSobre = FindViewById<ImageButton>(Resource.Id.btnSobre);
+            btnHelper = FindViewById<ImageButton>(Resource.Id.btnHelper);
 
             btnExec.Click += BtnExec_Click;
             btnSobre.Click += BtnSobre_Click;

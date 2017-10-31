@@ -15,18 +15,18 @@ namespace dotSimbler
     [Activity(Label = "Helper")]
     public class Helper : Activity
     {
-        Button btnSobre;
-        Button btnSimulador;
-        Button btnHelper;
+        ImageButton btnSobre;
+        ImageButton btnSimulador;
+        ImageButton btnHelper;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Helper);
 
-            btnSimulador = FindViewById<Button>(Resource.Id.btnSimulador);
-            btnSobre = FindViewById<Button>(Resource.Id.btnSobre);
-            btnHelper = FindViewById<Button>(Resource.Id.btnHelper);
+            btnSimulador = FindViewById<ImageButton>(Resource.Id.btnSimulador);
+            btnSobre = FindViewById<ImageButton>(Resource.Id.btnSobre);
+            btnHelper = FindViewById<ImageButton>(Resource.Id.btnHelper);
 
             btnSobre.Click += BtnSobre_Click;
             btnSimulador.Click += BtnSimulador_Click;

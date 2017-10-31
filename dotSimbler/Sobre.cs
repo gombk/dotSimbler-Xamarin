@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace dotSimbler
+namespace dotSimbler.Resources.layout
 {
     [Activity(Label = "Sobre")]
     public class Sobre : Activity

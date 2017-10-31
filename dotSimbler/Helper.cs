@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -10,7 +9,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace dotSimbler
+namespace dotSimbler.Resources.layout
 {
     [Activity(Label = "Helper")]
     public class Helper : Activity
@@ -24,27 +23,37 @@ namespace dotSimbler
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Helper);
 
-            btnSimulador = FindViewById<ImageButton>(Resource.Id.btnSimulador);
-            btnSobre = FindViewById<ImageButton>(Resource.Id.btnSobre);
-            btnHelper = FindViewById<ImageButton>(Resource.Id.btnHelper);
+            //ListView
+            var comandosListView = FindViewById<ListView>(Resource.Id.comandoslistView);
+            comandosListView.FastScrollEnabled = true;
+            comandosListView.ItemClick += ComandosListView_ItemClick;
+            var listaAdapter = new ListaAdapter(this, repLista.Comandos);
 
-            btnSobre.Click += BtnSobre_Click;
-            btnSimulador.Click += BtnSimulador_Click;
+            //btnSimulador = FindViewById<ImageButton>(Resource.Id.btnSimulador);
+            //btnSobre = FindViewById<ImageButton>(Resource.Id.btnSobre);
+            //btnHelper = FindViewById<ImageButton>(Resource.Id.btnHelper);
 
-            btnHelper.Enabled = false;
+            //btnSobre.Click += BtnSobre_Click;
+            //btnSimulador.Click += BtnSimulador_Click;
+
+            //btnHelper.Enabled = false;
         }
 
-        private void BtnSobre_Click(object sender, System.EventArgs e)
+        //private void BtnSobre_Click(object sender, System.EventArgs e)
+        //{
+        //    var intSobre = new Intent(this, typeof(Sobre));
+        //    StartActivity(intSobre);
+        //}
+
+        //private void BtnSimulador_Click(object sender, System.EventArgs e)
+        //{
+        //    var intSimulador = new Intent(this, typeof(MainActivity));
+        //    StartActivity(intSimulador);
+        //}
+
+        private void ComandosListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            var intSobre = new Intent(this, typeof(Sobre));
-            StartActivity(intSobre);
+            Toast.MakeText(this, repLista.Comandos[e.Position].ToString(), ToastLength.Long).Show();
         }
-
-        private void BtnSimulador_Click(object sender, System.EventArgs e)
-        {
-            var intSimulador = new Intent(this, typeof(MainActivity));
-            StartActivity(intSimulador);
-        }
-
     }
 }

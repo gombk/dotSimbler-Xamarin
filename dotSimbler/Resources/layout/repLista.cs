@@ -21,17 +21,24 @@ namespace dotSimbler.Resources.layout
            Comandos = new List<listaClass>();
            for (int i = 0; i< 10; i++)
            {
-               AddFilmes();
+               AddComandos();
            }
        }
 
-       private static void AddFilmes()
+       private static void AddComandos()
        {
             Comandos.Add(new listaClass
             {
                 id = 1,
                 nomeComando = "ADD",
                 desComando = "Adiciona o valor especificado ao registrador acumulador (AX)."
+            });
+
+            Comandos.Add(new listaClass
+            {
+                id = 2,
+                nomeComando = "SUB",
+                desComando = "Subtrai o valor especificado ao registrador acumulador (AX)."
             });
        }
    }

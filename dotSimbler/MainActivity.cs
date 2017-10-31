@@ -3,7 +3,7 @@ using Android.Widget;
 using Android.OS;
 using Android.Content;
 
-namespace dotSimbler
+namespace dotSimbler.Resources.layout
 {
     [Activity(Label = "dotSimbler", MainLauncher = true)]
     public class MainActivity : Activity
@@ -28,6 +28,7 @@ namespace dotSimbler
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
+            //Processo principal
             txtAX = FindViewById<TextView>(Resource.Id.txtAX);
             txtBX = FindViewById<TextView>(Resource.Id.txtBX);
             txtCX = FindViewById<TextView>(Resource.Id.txtCX);
@@ -37,6 +38,8 @@ namespace dotSimbler
             txtZflag = FindViewById<TextView>(Resource.Id.txtZflag);
             txtComp = FindViewById<EditText>(Resource.Id.txtComp);
             btnExec = FindViewById<Button>(Resource.Id.btnExec);
+
+            //Botões de navegação entre telas
             btnSimulador = FindViewById<ImageButton>(Resource.Id.btnSimulador);
             btnSobre = FindViewById<ImageButton>(Resource.Id.btnSobre);
             btnHelper = FindViewById<ImageButton>(Resource.Id.btnHelper);
@@ -111,6 +114,6 @@ namespace dotSimbler
                 Toast.MakeText(this, "Não existem comandos para executar." , ToastLength.Long).Show();
             }
         }
-    }
+}
 }
 

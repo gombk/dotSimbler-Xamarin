@@ -67,11 +67,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnSobre" />
-    <Button
+    <ImageButton
         android:text="SIMULADOR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSimulador" />
+        android:id="@+id/btnSimulador"
+        android:src="@drawable/buttonSim"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
     <Button
         android:text="HELPER"
         android:layout_width="match_parent"

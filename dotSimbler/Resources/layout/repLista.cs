@@ -29,14 +29,14 @@ namespace dotSimbler.Resources.layout
        {
             Comandos.Add(new listaClass
             {
-                id = 1,
+                id = 0,
                 nomeComando = "ADD",
                 desComando = "Adiciona o valor especificado ao registrador acumulador (AX)."
             });
 
             Comandos.Add(new listaClass
             {
-                id = 2,
+                id = 1,
                 nomeComando = "SUB",
                 desComando = "Subtrai o valor especificado ao registrador acumulador (AX)."
             });

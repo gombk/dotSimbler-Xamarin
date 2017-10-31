@@ -45,7 +45,7 @@ namespace dotSimbler.Resources.layout
             var txtDescricao = view.FindViewById<TextView>(Resource.Id.descricaoTextView);
 
             txtComando.Text = Comandos[position].nomeComando;
-            txtDescricao.Text = "Descrição: ADQWEHWQHEHOIHASHWQEH FUNCIONA CARALHO" + Comandos[position].desComando;
+            txtDescricao.Text = "Descrição: " + Comandos[position].desComando;
 
             return view;
         }

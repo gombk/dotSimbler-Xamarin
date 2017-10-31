@@ -20,7 +20,7 @@ namespace dotSimbler.Resources.layout
     
     public override string ToString()
     {
-        return nomeComando + "AAAAAAAAAAAA FUNCIONA PORRA " + desComando;
+        return nomeComando + " " + desComando;
     }
 }
 }

@@ -13,10 +13,12 @@
     android:id="@+id/comandoslistView" />
   <!--TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1"
         android:id="@+id/tableLayout1"
         android:minWidth="25px"
-        android:minHeight="25px">
+        android:minHeight="25px"
+        android:gravity="center|bottom">
         <TableRow
             android:id="@+id/tableRow1"
             android:gravity="bottom"

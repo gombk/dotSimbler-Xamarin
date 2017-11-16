@@ -5,7 +5,7 @@ using Android.Content;
 
 namespace dotSimbler.Resources.layout
 {
-    [Activity(Label = "dotSimbler", MainLauncher = true)]
+    [Activity(Label = "dotSimbler", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         TextView txtAX;

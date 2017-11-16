@@ -15,7 +15,8 @@ namespace dotSimbler
 {
     public class AnalisadorLexico
     {
-        private static List<string> comandos = new List<string>() { "ADD", "SUB", "MUL", "DIV", "INC", "DEC", "STORE", "NOT" };
+        private static List<string> comandos = new List<string>() { "ADD", "SUB", "MUL", "DIV", "INC", "DEC", "STORE", "NOT", "AND", "DB", "CMP", "HLT", "JMP", "JNO", "JNS",
+                                                                    "JNZ", "JO", "JS", "JZ", "LOAD", "NOP", "NOT", "OR"};
 
         public Resposta verificaComando(string[] verificar)
         {

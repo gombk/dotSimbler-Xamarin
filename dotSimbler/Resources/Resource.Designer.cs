@@ -59,6 +59,9 @@ namespace dotSimbler
 			// aapt resource value: 0x7f020004
 			public const int buttonSobre = 2130837508;
 			
+			// aapt resource value: 0x7f020005
+			public const int Icon = 2130837509;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

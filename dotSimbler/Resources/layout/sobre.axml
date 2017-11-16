@@ -73,6 +73,12 @@
             android:id="@+id/tableRow1"
             android:gravity="bottom"
             android:showDividers="none">
+        <TextView
+            android:text="..."
+            android:textColor="#323a45"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_column="0"
+             android:id="@+id/textView1" />
             <ImageButton
                 android:text="SIMULADOR"
                 android:id="@+id/btnSimulador"

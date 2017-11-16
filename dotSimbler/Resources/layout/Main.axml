@@ -31,18 +31,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/relativeLayout1">
-      <TableLayout
-          android:layout_width="match_parent"
-          android:layout_height="0dip"
-          android:layout_weight="1"
-          android:id="@+id/tableLayout1"
-          android:minWidth="25px"
-          android:minHeight="25px"
-          android:gravity="center|bottom">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableLayout1"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:gravity="bottom|center">
             <TableRow
                 android:id="@+id/tableRow1"
                 android:gravity="bottom"
                 android:showDividers="none">
+                <TextView
+                    android:text="..."
+                    android:textColor="#323a45"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_column="0"
+                    android:id="@+id/textView1" />
                 <ImageButton
                     android:text="SIMULADOR"
                     android:id="@+id/btnSimulador"
@@ -52,7 +57,7 @@
                     android:paddingEnd="24dp"
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
-                    android:layout_column="0"
+                    android:layout_column="1"
                     android:layout_span="0"
                     android:layout_gravity="center"
                     android:padding="14dp" />

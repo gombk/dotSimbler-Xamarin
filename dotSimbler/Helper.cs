@@ -21,12 +21,12 @@ namespace dotSimbler.Resources.layout
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Helper);
+            SetContentView(Resource.Layout.listaComandos);
 
             //ListView
             var comandosListView = FindViewById<ListView>(Resource.Id.comandoslistView);
-            comandosListView.FastScrollEnabled = true;
-            comandosListView.ItemClick += ComandosListView_ItemClick;
+            //comandosListView.FastScrollEnabled = true;
+            //comandosListView.ItemClick += ComandosListView_ItemClick;
             var listaAdapter = new ListaAdapter(this, repLista.Comandos);
 
             //btnSimulador = FindViewById<ImageButton>(Resource.Id.btnSimulador);
@@ -51,9 +51,9 @@ namespace dotSimbler.Resources.layout
         //    StartActivity(intSimulador);
         //}
 
-        private void ComandosListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+       /* private void ComandosListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             Toast.MakeText(this, repLista.Comandos[e.Position].ToString(), ToastLength.Long).Show();
-        }
+        }*/
     }
 }

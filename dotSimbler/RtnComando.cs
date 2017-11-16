@@ -246,9 +246,8 @@ namespace dotSimbler
                 //Desvia o programa para o endereço especificado se o sinalizador Zero estiver em "1"  
                 case "JZ":
                     break;
-
-                    return reg;
             }
+            return reg;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace dotSimbler
             String CX = reg.GetCX();
             String DX = reg.GetCX();
 
-            if (comando.ToUpper() != "INC" && comando.ToUpper() != "DEC" && comando.ToUpper() != "STORE" 
+            if (comando.ToUpper() != "INC" && comando.ToUpper() != "DEC" && comando.ToUpper() != "STORE"
                 && comando.ToUpper() != "AND" && comando.ToUpper() != "OR" && comando.ToUpper() != "NOT")
             {
                 //verifica se o Operando é valor ou Registrador, se for registrador, seta o valor no operando.
@@ -196,9 +196,59 @@ namespace dotSimbler
                     }
 
                     break;
-            }
 
-            return reg;
+                //Armazena o valor especificado no registrador acumulador (AX).  
+                case "LOAD":
+                    if (operando.ToUpper() == "AX")
+                    {
+                        reg.SetAX(reg.GetAX());
+                        break;
+                    }
+                    break;
+
+                //COMANDOS A ADICIONAR: "DB", "CMP", "JMP", "JNO", "JNS", "JNZ", "JO", "JS", "JZ"
+                //NOP ou "No Operation Peformed" é uma instrução comumente usada para operações com temporizadores.  Não efetua nenhuma operação.
+                case "NOP":
+                    break;
+
+                //DB ou Define Byte aloca um valor numérico na posição de memória onde especificado. 
+                case "DB":
+                    break;
+
+                //Compara o valor do registrador acumulador (AX) com o valor especificado.  O resultado dessa operação afetará os sinalizadores (Zero e Sinal), dependendo de seu resultado.
+                case "CMP":
+                    break;
+
+                //Desvia o programa para o endereço especificado. 
+                case "JMP":
+                    break;
+
+                //Desvia o programa para o endereço especificado se o sinalizador Overflow estiver em "0"  
+                case "JNO":
+                    break;
+
+                //Desvia o programa para o endereço especificado se o sinalizador Sinal estiver em "0"  
+                case "JNS":
+                    break;
+
+                //Desvia o programa para o endereço especificado se o sinalizador Zero estiver em "0".  
+                case "JNZ":
+                    break;
+
+                //Desvia o programa para o endereço especificado se o sinalizador Overflow estiver em "1"  
+                case "JO":
+                    break;
+
+                //Desvia o programa para o endereço especificado se o sinalizador Sinal estiver em "1". 
+                case "JS":
+                    break;
+
+                //Desvia o programa para o endereço especificado se o sinalizador Zero estiver em "1"  
+                case "JZ":
+                    break;
+
+                    return reg;
+            }
         }
     }
 }
